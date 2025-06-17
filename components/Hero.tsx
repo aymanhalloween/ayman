@@ -6,7 +6,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-off-white">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50">
       {/* Main content */}
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -21,15 +21,15 @@ const Hero = () => {
             className="headline-massive mb-8 max-w-4xl mx-auto"
           >
             Hi, I&apos;m Ayman.<br />
-            <span className="text-deep-charcoal/70">People. Product. Ops.</span><br />
-            <span className="text-deep-charcoal/70">I ship what matters.</span>
+            <span className="text-gray-700">People. Product. Ops.</span><br />
+            <span className="text-gray-700">I ship what matters.</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="body-large text-deep-charcoal/60 mb-12 max-w-2xl mx-auto"
+            className="body-large text-gray-600 mb-12 max-w-2xl mx-auto"
           >
             From sneaker bots to Nike dashboards. From fixing iPhones to designing how people use Macs. From DIY divorces to AI tools with soul.<br />
             I move fast, think deep, and build for people first.
