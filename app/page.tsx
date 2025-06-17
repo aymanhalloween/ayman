@@ -1,8 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Mail, ExternalLink, ArrowUpRight, Github, Linkedin, Twitter, Calendar, Building, Users } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Mail, ArrowUpRight, Github, Linkedin, Twitter, Calendar } from 'lucide-react';
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -149,11 +148,11 @@ export default function Home() {
                   </p>
                   
                   <p>
-                    Now I'm building <span className="text-olive-600 font-medium">Eterna</span> — AI that preserves memories like Pixar meets OpenAI. Built for your grandma.
+                    Now I&apos;m building <span className="text-olive-600 font-medium">Eterna</span> — AI that preserves memories like Pixar meets OpenAI. Built for your grandma.
                   </p>
                   
                   <p>
-                    I've founded companies, advised founders, and helped teams raise $12M+ without losing their souls. I believe great products start with empathy, not features.
+                    I&apos;ve founded companies, advised founders, and helped teams raise $12M+ without losing their souls. I believe great products start with empathy, not features.
                   </p>
                 </div>
                 
@@ -165,7 +164,7 @@ export default function Home() {
                   className="mt-12 p-8 bg-white rounded-2xl border border-stone-200"
                 >
                   <p className="font-serif text-lg italic text-stone-700">
-                    "The best interfaces disappear. Stories shape behavior more than specs ever will."
+                    &quot;The best interfaces disappear. Stories shape behavior more than specs ever will.&quot;
                   </p>
                 </motion.div>
               </div>
@@ -403,7 +402,7 @@ export default function Home() {
               
               <p className="text-xl text-stone-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                 Whether you need a brain, a builder, or a believer —<br />
-                let's talk.
+                let&apos;s talk.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
