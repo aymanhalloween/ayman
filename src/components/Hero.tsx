@@ -29,7 +29,7 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="headline-massive mb-8 max-w-4xl mx-auto"
           >
-            Hi, I'm Ayman.<br />
+            Hi, I&apos;m Ayman.<br />
             <span className="text-deep-charcoal/70">People. Product. Ops.</span><br />
             <span className="text-deep-charcoal/70">I ship what matters.</span>
           </motion.h1>

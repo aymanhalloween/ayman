@@ -61,7 +61,7 @@ const About = () => {
             I started out selling financial advice in 2nd grade.<br /><br />
             Later, I welded robots for FEMA to help in natural disasters.<br /><br />
             Recently, I helped founders raise millions and build companies that actually ship.<br /><br />
-            I've always been drawn to systems — but I build for people.<br />
+            I&apos;ve always been drawn to systems — but I build for people.<br />
             Empathy is the through line. Everything else is just execution.
           </p>
         </motion.div>
@@ -111,13 +111,13 @@ const About = () => {
             <h3 className="headline-medium mb-6">The Through Line</h3>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="space-y-2">
-                <p className="font-medium">"Great products start with empathy, not features."</p>
+                <p className="font-medium">&ldquo;Great products start with empathy, not features.&rdquo;</p>
               </div>
               <div className="space-y-2">
-                <p className="font-medium">"Simplicity is a superpower. If it's not clear, it doesn't scale."</p>
+                <p className="font-medium">&ldquo;Simplicity is a superpower. If it&apos;s not clear, it doesn&apos;t scale.&rdquo;</p>
               </div>
               <div className="space-y-2">
-                <p className="font-medium">"Stories are strategy. Narratives shape behavior more than specs ever will."</p>
+                <p className="font-medium">&ldquo;Stories are strategy. Narratives shape behavior more than specs ever will.&rdquo;</p>
               </div>
             </div>
           </div>

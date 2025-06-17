@@ -72,7 +72,7 @@ const Projects = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -87,7 +87,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="headline-large mb-6">Stuff I've Built</h2>
+          <h2 className="headline-large mb-6">Stuff I&apos;ve Built</h2>
           <p className="body-large text-deep-charcoal/60 max-w-3xl mx-auto">
             From AI tools that preserve memories to enterprise platforms that move billions. 
             Each project started with a person, not a feature.
@@ -101,7 +101,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               variants={itemVariants}
@@ -173,7 +173,7 @@ const Projects = () => {
             whileTap={{ scale: 0.95 }}
             className="btn-primary inline-flex items-center space-x-2"
           >
-            <span>Let's Talk</span>
+            <span>Let&apos;s Talk</span>
             <ExternalLink className="w-4 h-4" />
           </motion.a>
         </motion.div>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Ayman has this rare ability to see the human story behind every product decision. He doesn't just build features—he builds experiences that people actually want to use.",
+      quote: "Ayman has this rare ability to see the human story behind every product decision. He doesn&apos;t just build features—he builds experiences that people actually want to use.",
       author: "Sarah Chen",
       role: "Design Partner, Kleiner Perkins",
       company: "Former Apple Design Team"
@@ -17,7 +17,7 @@ const Testimonials = () => {
       company: "Nike Digital"
     },
     {
-      quote: "Ayman helped us raise our Series A by turning our scattered ideas into a compelling narrative. He doesn't just understand product—he understands people.",
+      quote: "Ayman helped us raise our Series A by turning our scattered ideas into a compelling narrative. He doesn&apos;t just understand product—he understands people.",
       author: "Alex Rodriguez",
       role: "CEO",
       company: "Stealth AI Startup"
@@ -29,13 +29,13 @@ const Testimonials = () => {
       company: "Apple Hardware Engineering"
     },
     {
-      quote: "Ayman's thesis on AI + empathy isn't just smart—it's necessary. He sees where the industry is going before it gets there.",
+      quote: "Ayman&apos;s thesis on AI + empathy isn&apos;t just smart—it&apos;s necessary. He sees where the industry is going before it gets there.",
       author: "David Park",
       role: "General Partner",
       company: "Alif Ventures"
     },
     {
-      quote: "He built our robotics platform like he was designing an iPhone. Every interaction was intentional, every detail mattered. That's what great product thinking looks like.",
+      quote: "He built our robotics platform like he was designing an iPhone. Every interaction was intentional, every detail mattered. That&apos;s what great product thinking looks like.",
       author: "Dr. Maria Santos",
       role: "FEMA Research Lead",
       company: "Emergency Response Division"
@@ -54,8 +54,8 @@ const Testimonials = () => {
         >
           <h2 className="headline-large mb-6">People Say Nice Things</h2>
           <p className="body-large text-deep-charcoal/60 max-w-3xl mx-auto">
-            From teammates who've shipped with me to founders I've helped raise millions. 
-            Here's what they'd probably say if you asked.
+            From teammates who&apos;ve shipped with me to founders I&apos;ve helped raise millions. 
+            Here&apos;s what they&apos;d probably say if you asked.
           </p>
         </motion.div>
 
@@ -77,7 +77,7 @@ const Testimonials = () => {
               className="bg-white border border-deep-charcoal/10 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
             >
               <blockquote className="text-deep-charcoal/80 leading-relaxed mb-6 relative">
-                <span className="text-4xl text-accent/20 absolute -top-2 -left-2">"</span>
+                <span className="text-4xl text-accent/20 absolute -top-2 -left-2">&ldquo;</span>
                 <p className="relative z-10">{testimonial.quote}</p>
               </blockquote>
               

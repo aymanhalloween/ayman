@@ -11,7 +11,7 @@ const Philosophy = () => {
     },
     {
       title: "Simplicity",
-      text: "Most products are overdesigned because someone didn't edit.",
+      text: "Most products are overdesigned because someone didn&apos;t edit.",
       category: "Design"
     },
     {
@@ -31,7 +31,7 @@ const Philosophy = () => {
     },
     {
       title: "Clarity as Power",
-      text: "Simplicity is a superpower. If it's not clear, it doesn't scale.",
+      text: "Simplicity is a superpower. If it&apos;s not clear, it doesn&apos;t scale.",
       category: "Growth"
     }
   ];
@@ -48,7 +48,7 @@ const Philosophy = () => {
         >
           <h2 className="headline-large mb-6">Hot Takes</h2>
           <p className="body-large text-deep-charcoal/60 max-w-3xl mx-auto">
-            Stuff I'd bet on. Lessons learned from breaking things, fixing them, and occasionally getting them right.
+            Stuff I&apos;d bet on. Lessons learned from breaking things, fixing them, and occasionally getting them right.
           </p>
         </motion.div>
 
@@ -80,7 +80,7 @@ const Philosophy = () => {
                 {belief.title}
               </h3>
               <p className="text-deep-charcoal/70 leading-relaxed">
-                "{belief.text}"
+                &ldquo;{belief.text}&rdquo;
               </p>
             </motion.div>
           ))}
@@ -100,7 +100,7 @@ const Philosophy = () => {
             onClick={() => alert("Warming up charisma... 100% complete! 🔥")}
             className="text-sm text-deep-charcoal/50 hover:text-deep-charcoal transition-colors border border-deep-charcoal/20 rounded-full px-4 py-2"
           >
-            Don't Click Me
+            Don&apos;t Click Me
           </motion.button>
         </motion.div>
       </div>

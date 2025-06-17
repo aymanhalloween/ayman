@@ -14,7 +14,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="headline-large mb-6 text-off-white">Let's Build Something</h2>
+          <h2 className="headline-large mb-6 text-off-white">Let&apos;s Build Something</h2>
           <p className="body-large text-off-white/70 max-w-2xl mx-auto mb-8">
             Advising. Building. Investing. If I can help — hit me up.
           </p>
@@ -104,7 +104,7 @@ const Contact = () => {
             />
             <textarea
               rows={4}
-              placeholder="What's on your mind?"
+              placeholder="What&apos;s on your mind?"
               className="w-full p-3 bg-off-white/5 border border-off-white/20 rounded-lg text-off-white placeholder-off-white/50 focus:outline-none focus:border-accent resize-none"
             />
             <motion.button
@@ -130,7 +130,7 @@ const Contact = () => {
             © Ayman Hassen. All rights reserved.
           </p>
           <p className="text-xs text-off-white/40">
-            Unless you're building something cool — then maybe we talk.
+            Unless you&apos;re building something cool — then maybe we talk.
           </p>
         </motion.div>
       </div>
