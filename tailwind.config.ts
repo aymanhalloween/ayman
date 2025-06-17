@@ -1,54 +1,50 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        // Custom color palette from the brief
-        'off-white': '#F8F8F8',
-        'deep-charcoal': '#111111',
-        'muted-tan': '#E8E2D4',
-        'warm-grey': '#D4CFC7',
-        'accent': '#2563EB', // Subtle blue for accents
+        charcoal: '#2A2A2A',
+        bone: '#F5F5F0',
+        sand: '#E8E6E1',
+        'burnt-orange': '#D2691E',
+        sage: '#9CAF88',
+        'electric-blue': '#0066FF',
+        stone: {
+          50: '#fafaf9',
+          100: '#f5f5f4',
+          200: '#e7e5e4',
+          300: '#d6d3d1',
+          400: '#a8a29e',
+          500: '#78716c',
+          600: '#57534e',
+          700: '#44403c',
+          800: '#292524',
+          900: '#1c1917',
+        },
+        olive: {
+          100: '#f0f2ec',
+          200: '#e8ebe0',
+          300: '#d1d7c4',
+          400: '#a3b18a',
+          500: '#8a9575',
+          600: '#6b7a52',
+          700: '#5a6b45',
+        },
       },
       fontFamily: {
-        // Typography system
-        'sans': ['Inter', 'Söhne', 'Neue Haas Grotesk', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
-      },
-      fontSize: {
-        // Typography scale
-        'xs': ['0.75rem', { lineHeight: '1rem' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '1.5rem' }],
-        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
-        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1.1' }],
-        '6xl': ['3.75rem', { lineHeight: '1.1' }],
-        '7xl': ['4.5rem', { lineHeight: '1.05' }],
-        '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }],
-      },
-      letterSpacing: {
-        'tightest': '-0.075em',
-        'tighter': '-0.05em',
-        'tight': '-0.025em',
-        'normal': '0em',
-        'wide': '0.025em',
-        'wider': '0.05em',
-        'widest': '0.1em',
+        'serif': ['Playfair Display', 'Georgia', 'Times New Roman', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'parallax': 'parallax 1s ease-out',
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.8s ease-out',
+        'scale-in': 'scaleIn 0.5s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -56,17 +52,16 @@ const config: Config = {
           '100%': { opacity: '1' },
         },
         slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        parallax: {
-          '0%': { transform: 'translateY(0)' },
-          '100%': { transform: 'translateY(-20px)' },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
     },
   },
   plugins: [],
-};
-
-export default config; 
+}
+export default config 
