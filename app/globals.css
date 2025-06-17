@@ -5,3 +5,119 @@
 body {
   font-family: 'Inter', system-ui, sans-serif;
 }
+
+/* Custom component styles */
+.btn-primary {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1f2937;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #111827;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.interactive-card {
+  transition: transform 0.2s;
+}
+
+.interactive-card:hover {
+  transform: scale(1.05);
+}
+
+/* Typography classes */
+.headline-massive {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .headline-massive {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headline-massive {
+    font-size: 4.5rem;
+  }
+}
+
+.headline-large {
+  font-size: 1.875rem;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .headline-large {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headline-large {
+    font-size: 3rem;
+  }
+}
+
+.headline-medium {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .headline-medium {
+    font-size: 1.5rem;
+  }
+}
+
+.body-large {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+@media (min-width: 768px) {
+  .body-large {
+    font-size: 1.25rem;
+  }
+}
+
+.body-base {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.meta-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
