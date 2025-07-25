@@ -2,19 +2,19 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ayman Hassen — Builder, Operator, Storyteller',
-  description: 'Ex-Apple PM, venture strategist, and founder of AI-powered startups. Building products with soul.',
-  keywords: ['Ayman Hassen', 'Product Manager', 'AI', 'Startups', 'Apple', 'Venture'],
+  title: 'Ayman Hassen',
+  description: 'Product guy that builds cool stuff based in SF/Dallas. Experience at Apple, Nike, and Alif VC. Currently consulting for various companies.',
+  keywords: ['Ayman Hassen', 'Product Manager', 'Consultant', 'Apple', 'Nike', 'Alif VC', 'Hassen Labs'],
   authors: [{ name: 'Ayman Hassen' }],
   openGraph: {
-    title: 'Ayman Hassen — Builder, Operator, Storyteller',
-    description: 'Ex-Apple PM, venture strategist, and founder of AI-powered startups. Building products with soul.',
+    title: 'Ayman Hassen',
+    description: 'Product guy that builds cool stuff based in SF/Dallas. Experience at Apple, Nike, and Alif VC. Currently consulting for various companies.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ayman Hassen — Builder, Operator, Storyteller',
-    description: 'Ex-Apple PM, venture strategist, and founder of AI-powered startups. Building products with soul.',
+    title: 'Ayman Hassen',
+    description: 'Product guy that builds cool stuff based in SF/Dallas. Experience at Apple, Nike, and Alif VC. Currently consulting for various companies.',
   },
 }
 
