@@ -2,19 +2,63 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ayman Hassen',
-  description: 'Product guy that builds cool stuff based in SF/Dallas. Experience at Apple, Nike, and Alif VC. Currently consulting for various companies.',
-  keywords: ['Ayman Hassen', 'Product Manager', 'Consultant', 'Apple', 'Nike', 'Alif VC', 'Hassen Labs'],
-  authors: [{ name: 'Ayman Hassen' }],
+  title: {
+    default: 'Ayman Hassen | Product Manager & Investor',
+    template: '%s | Ayman Hassen'
+  },
+  description: 'Product manager and investor based in SF and Dallas. Experience building products at Apple, strategy at Nike, and operating partner at Alif VC. Currently investing into companies and building WAQF endowment fund.',
+  keywords: [
+    'Ayman Hassen',
+    'Product Manager',
+    'Investor',
+    'Venture Capital',
+    'Apple Product Manager',
+    'Nike Strategy',
+    'Alif VC',
+    'Hassen Ventures',
+    'San Francisco',
+    'Dallas',
+    'WAQF',
+    'Endowment Fund',
+    'Startup Advisor',
+    'Tech Advisor',
+    'Product Strategy',
+    'Operating Partner'
+  ],
+  authors: [{ name: 'Ayman Hassen', url: 'https://aymanhassen.com' }],
+  creator: 'Ayman Hassen',
+  publisher: 'Ayman Hassen',
+  metadataBase: new URL('https://aymanhassen.com'),
+  alternates: {
+    canonical: '/'
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
-    title: 'Ayman Hassen',
-    description: 'Product guy that builds cool stuff based in SF/Dallas. Experience at Apple, Nike, and Alif VC. Currently consulting for various companies.',
+    title: 'Ayman Hassen | Product Manager & Investor',
+    description: 'Product manager and investor based in SF and Dallas. Experience at Apple, Nike, and Alif VC. Building the future through startups and WAQF endowment fund.',
+    url: 'https://aymanhassen.com',
+    siteName: 'Ayman Hassen',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ayman Hassen',
-    description: 'Product guy that builds cool stuff based in SF/Dallas. Experience at Apple, Nike, and Alif VC. Currently consulting for various companies.',
+    title: 'Ayman Hassen | Product Manager & Investor',
+    description: 'Product manager and investor based in SF and Dallas. Experience at Apple, Nike, and Alif VC.',
+    creator: '@aymancooks',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
