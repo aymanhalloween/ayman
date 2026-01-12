@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     canonical: '/'
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
   openGraph: {
     title: 'Ayman Hassen | Product Manager & Investor',
