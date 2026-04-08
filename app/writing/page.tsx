@@ -15,18 +15,18 @@ const fade = {
 
 export default function WritingPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#E8E8E8]">
+    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A]">
 
       {/* Nav */}
       <nav className="max-w-[640px] mx-auto px-6 pt-12 pb-4 flex items-center justify-between">
-        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#E8E8E8] no-underline">
+        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#1A1A1A] no-underline">
           Ayman Hassen
         </Link>
         <div className="flex gap-6">
-          <Link href="/#building" className="text-[13px] text-[#737373] hover:text-[#E8E8E8] transition-colors duration-200 no-underline">
+          <Link href="/#building" className="text-[13px] text-[#737373] hover:text-[#1A1A1A] transition-colors duration-200 no-underline">
             Building
           </Link>
-          <Link href="/writing" className="text-[13px] text-[#E8E8E8] transition-colors duration-200 no-underline">
+          <Link href="/writing" className="text-[13px] text-[#1A1A1A] transition-colors duration-200 no-underline">
             Writing
           </Link>
         </div>
@@ -37,7 +37,7 @@ export default function WritingPage() {
           <motion.h2
             custom={0}
             variants={fade}
-            className="text-[12px] font-medium mb-10 text-[#636363] uppercase tracking-[0.15em]"
+            className="text-[12px] font-medium mb-10 text-[#8A8A8A] uppercase tracking-[0.15em]"
           >
             My thoughts, evolving over time
           </motion.h2>
@@ -51,12 +51,12 @@ export default function WritingPage() {
               >
                 <Link
                   href={`/writing/${essay.slug}`}
-                  className="group block py-6 border-b border-[#1A1A1A] first:border-t first:border-[#1A1A1A] no-underline"
+                  className="group block py-6 border-b border-[#E5E5E5] first:border-t first:border-[#E5E5E5] no-underline"
                 >
-                  <h3 className="text-[17px] font-normal text-[#E8E8E8] group-hover:text-[#C4A574] transition-colors duration-200 mb-1">
+                  <h3 className="text-[17px] font-normal text-[#1A1A1A] group-hover:text-[#C4A574] transition-colors duration-200 mb-1">
                     {essay.title}
                   </h3>
-                  <p className="text-[13px] text-[#636363]">{essay.date}</p>
+                  <p className="text-[13px] text-[#8A8A8A]">{essay.date}</p>
                 </Link>
               </motion.div>
             ))}
@@ -68,7 +68,7 @@ export default function WritingPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="pt-8 mt-16 border-t border-[#1A1A1A]"
+          className="pt-8 mt-16 border-t border-[#E5E5E5]"
         >
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {[
@@ -85,7 +85,7 @@ export default function WritingPage() {
                 href={link.url}
                 target={link.url.startsWith('mailto') ? undefined : '_blank'}
                 rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className="text-[13px] text-[#636363] hover:text-[#E8E8E8] transition-colors duration-200 no-underline"
+                className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
               >
                 {link.label}
               </motion.a>

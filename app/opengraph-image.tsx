@@ -10,7 +10,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: '#0A0A0A',
+          background: '#FAFAFA',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -23,7 +23,7 @@ export default async function Image() {
           style={{
             fontSize: 64,
             fontWeight: 400,
-            color: '#E8E8E8',
+            color: '#1A1A1A',
             letterSpacing: '-0.02em',
             marginBottom: 24,
           }}
@@ -33,7 +33,7 @@ export default async function Image() {
         <div
           style={{
             fontSize: 28,
-            color: '#A0A0A0',
+            color: '#525252',
             lineHeight: 1.6,
           }}
         >
@@ -42,7 +42,7 @@ export default async function Image() {
         <div
           style={{
             fontSize: 18,
-            color: '#636363',
+            color: '#8A8A8A',
             marginTop: 40,
           }}
         >

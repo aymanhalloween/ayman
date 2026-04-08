@@ -16,8 +16,8 @@ html {
 
 body {
   height: 100%;
-  background-color: #0A0A0A;
-  color: #E8E8E8;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,5 +35,5 @@ a {
 
 ::selection {
   background: rgba(196, 165, 116, 0.3);
-  color: #E8E8E8;
+  color: #1A1A1A;
 } 

@@ -38,10 +38,10 @@ export default function ArticlePage() {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-[#0A0A0A] text-[#E8E8E8] flex items-center justify-center">
+      <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A] flex items-center justify-center">
         <div className="text-center">
-          <p className="text-[#636363] mb-4">Essay not found.</p>
-          <Link href="/writing" className="text-[13px] text-[#636363] hover:text-[#E8E8E8] transition-colors no-underline">
+          <p className="text-[#8A8A8A] mb-4">Essay not found.</p>
+          <Link href="/writing" className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors no-underline">
             ← Back to writing
           </Link>
         </div>
@@ -50,18 +50,18 @@ export default function ArticlePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#E8E8E8]">
+    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A]">
 
       {/* Nav */}
       <nav className="max-w-[640px] mx-auto px-6 pt-12 pb-4 flex items-center justify-between">
-        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#E8E8E8] no-underline">
+        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#1A1A1A] no-underline">
           Ayman Hassen
         </Link>
         <div className="flex gap-6">
-          <Link href="/#building" className="text-[13px] text-[#737373] hover:text-[#E8E8E8] transition-colors duration-200 no-underline">
+          <Link href="/#building" className="text-[13px] text-[#737373] hover:text-[#1A1A1A] transition-colors duration-200 no-underline">
             Building
           </Link>
-          <Link href="/writing" className="text-[13px] text-[#E8E8E8] transition-colors duration-200 no-underline">
+          <Link href="/writing" className="text-[13px] text-[#1A1A1A] transition-colors duration-200 no-underline">
             Writing
           </Link>
         </div>
@@ -71,7 +71,7 @@ export default function ArticlePage() {
         <motion.article initial="hidden" animate="visible">
 
           <motion.div custom={0} variants={fade} className="mb-12">
-            <Link href="/writing" className="text-[13px] text-[#636363] hover:text-[#E8E8E8] transition-colors no-underline">
+            <Link href="/writing" className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors no-underline">
               ← Back
             </Link>
           </motion.div>
@@ -84,7 +84,7 @@ export default function ArticlePage() {
             {article.title}
           </motion.h1>
 
-          <motion.p custom={2} variants={fade} className="text-[13px] text-[#636363] mb-12">
+          <motion.p custom={2} variants={fade} className="text-[13px] text-[#8A8A8A] mb-12">
             {article.date}
           </motion.p>
 
@@ -96,7 +96,7 @@ export default function ArticlePage() {
                     key={i}
                     custom={i + 3}
                     variants={fade}
-                    className="text-[17px] font-medium text-[#E8E8E8] mt-10 mb-2"
+                    className="text-[17px] font-medium text-[#1A1A1A] mt-10 mb-2"
                   >
                     {block.replace('## ', '')}
                   </motion.h2>
@@ -107,7 +107,7 @@ export default function ArticlePage() {
                   key={i}
                   custom={i + 3}
                   variants={fade}
-                  className="text-[15px] leading-[1.8] text-[#A0A0A0]"
+                  className="text-[15px] leading-[1.8] text-[#525252]"
                 >
                   {block}
                 </motion.p>
@@ -122,7 +122,7 @@ export default function ArticlePage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="pt-8 mt-20 border-t border-[#1A1A1A]"
+          className="pt-8 mt-20 border-t border-[#E5E5E5]"
         >
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {[
@@ -139,7 +139,7 @@ export default function ArticlePage() {
                 href={link.url}
                 target={link.url.startsWith('mailto') ? undefined : '_blank'}
                 rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className="text-[13px] text-[#636363] hover:text-[#E8E8E8] transition-colors duration-200 no-underline"
+                className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
               >
                 {link.label}
               </motion.a>

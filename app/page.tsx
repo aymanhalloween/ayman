@@ -21,9 +21,9 @@ const projects = [
 ];
 
 const statusColor: Record<string, string> = {
-  'Active': 'text-[#E8E8E8]',
-  'Acquired': 'text-[#636363]',
-  'In development': 'text-[#737373]',
+  'Active': 'text-[#1A1A1A]',
+  'Acquired': 'text-[#A0A0A0]',
+  'In development': 'text-[#8A8A8A]',
 };
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#E8E8E8]">
+    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -51,14 +51,14 @@ export default function Home() {
 
       {/* Nav */}
       <nav className="max-w-[640px] mx-auto px-6 pt-12 pb-4 flex items-center justify-between">
-        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#E8E8E8] no-underline">
+        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#1A1A1A] no-underline">
           Ayman Hassen
         </Link>
         <div className="flex gap-6">
-          <a href="#building" className="text-[13px] text-[#737373] hover:text-[#E8E8E8] transition-colors duration-200 no-underline">
+          <a href="#building" className="text-[13px] text-[#737373] hover:text-[#1A1A1A] transition-colors duration-200 no-underline">
             Building
           </a>
-          <Link href="/writing" className="text-[13px] text-[#737373] hover:text-[#E8E8E8] transition-colors duration-200 no-underline">
+          <Link href="/writing" className="text-[13px] text-[#737373] hover:text-[#1A1A1A] transition-colors duration-200 no-underline">
             Writing
           </Link>
         </div>
@@ -80,28 +80,28 @@ export default function Home() {
             Ayman Hassen
           </motion.h1>
 
-          <motion.p custom={1} variants={fade} className="text-[15px] leading-[1.7] text-[#A0A0A0] mb-4">
+          <motion.p custom={1} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
             I&apos;m the founder of{' '}
-            <a href="#building" className="text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors">Maidah</a>
+            <a href="#building" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">Maidah</a>
             , where I&apos;m building a permanent endowment fund for Muslims in the West.
           </motion.p>
 
-          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.7] text-[#A0A0A0] mb-4">
+          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
             Before this, I was a product manager at{' '}
-            <span className="text-[#E8E8E8]">Apple</span> on the Mac team for four years,
+            <span className="text-[#1A1A1A]">Apple</span> on the Mac team for four years,
             ran strategy and operations at{' '}
-            <span className="text-[#E8E8E8]">Nike</span>, and was on the founding team at{' '}
-            <a href="https://alif.build" target="_blank" rel="noopener noreferrer" className="text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors">Alif</a>
+            <span className="text-[#1A1A1A]">Nike</span>, and was on the founding team at{' '}
+            <a href="https://alif.build" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">Alif</a>
             , a venture fund and studio for Muslim founders.
           </motion.p>
 
-          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.7] text-[#A0A0A0] mb-4">
+          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
             I&apos;ve had a few products acquired along the way. I{' '}
-            <Link href="/writing" className="text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors">write</Link>
+            <Link href="/writing" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">write</Link>
             , invest in early-stage companies, and am currently based in Dallas.
           </motion.p>
 
-          <motion.p custom={4} variants={fade} className="text-[15px] leading-[1.7] text-[#636363]">
+          <motion.p custom={4} variants={fade} className="text-[15px] leading-[1.7] text-[#8A8A8A]">
             ~A
           </motion.p>
         </motion.section>
@@ -117,7 +117,7 @@ export default function Home() {
           <motion.h2
             custom={0}
             variants={fade}
-            className="text-[12px] font-medium mb-8 text-[#636363] uppercase tracking-[0.15em]"
+            className="text-[12px] font-medium mb-8 text-[#8A8A8A] uppercase tracking-[0.15em]"
           >
             Building
           </motion.h2>
@@ -128,7 +128,7 @@ export default function Home() {
                 key={project.name}
                 custom={i + 1}
                 variants={fade}
-                className="group py-4 border-b border-[#1A1A1A] first:border-t first:border-[#1A1A1A]"
+                className="group py-4 border-b border-[#E5E5E5] first:border-t first:border-[#E5E5E5]"
               >
                 <div className="flex items-baseline justify-between gap-4">
                   <div className="flex-1 min-w-0">
@@ -137,18 +137,18 @@ export default function Home() {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[15px] font-medium text-[#E8E8E8] no-underline group-hover:text-[#C4A574] transition-colors duration-200"
+                        className="text-[15px] font-medium text-[#1A1A1A] no-underline group-hover:text-[#C4A574] transition-colors duration-200"
                       >
                         {project.name}
                       </a>
                     ) : (
-                      <span className="text-[15px] font-medium text-[#E8E8E8]">
+                      <span className="text-[15px] font-medium text-[#1A1A1A]">
                         {project.name}
                       </span>
                     )}
-                    <p className="text-[13px] text-[#636363] mt-0.5">{project.desc}</p>
+                    <p className="text-[13px] text-[#8A8A8A] mt-0.5">{project.desc}</p>
                   </div>
-                  <span className={`text-[11px] uppercase tracking-[0.1em] font-medium shrink-0 ${statusColor[project.status] || 'text-[#636363]'}`}>
+                  <span className={`text-[11px] uppercase tracking-[0.1em] font-medium shrink-0 ${statusColor[project.status] || 'text-[#8A8A8A]'}`}>
                     {project.status}
                   </span>
                 </div>
@@ -167,7 +167,7 @@ export default function Home() {
           <motion.h2
             custom={0}
             variants={fade}
-            className="text-[12px] font-medium mb-8 text-[#636363] uppercase tracking-[0.15em]"
+            className="text-[12px] font-medium mb-8 text-[#8A8A8A] uppercase tracking-[0.15em]"
           >
             Experience
           </motion.h2>
@@ -186,16 +186,16 @@ export default function Home() {
                       href={exp.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[15px] text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors duration-200"
+                      className="text-[15px] text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors duration-200"
                     >
                       {exp.co}
                     </a>
                   ) : (
-                    <span className="text-[15px] text-[#E8E8E8]">{exp.co}</span>
+                    <span className="text-[15px] text-[#1A1A1A]">{exp.co}</span>
                   )}
-                  <p className="text-[13px] text-[#636363]">{exp.role}</p>
+                  <p className="text-[13px] text-[#8A8A8A]">{exp.role}</p>
                 </div>
-                <span className="text-[13px] text-[#4A4A4A] shrink-0">{exp.time}</span>
+                <span className="text-[13px] text-[#A0A0A0] shrink-0">{exp.time}</span>
               </motion.div>
             ))}
           </div>
@@ -206,7 +206,7 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="pt-8 border-t border-[#1A1A1A]"
+          className="pt-8 border-t border-[#E5E5E5]"
         >
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {[
@@ -223,7 +223,7 @@ export default function Home() {
                 href={link.url}
                 target={link.url.startsWith('mailto') ? undefined : '_blank'}
                 rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className="text-[13px] text-[#636363] hover:text-[#E8E8E8] transition-colors duration-200 no-underline"
+                className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
               >
                 {link.label}
               </motion.a>
