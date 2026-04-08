@@ -72,21 +72,13 @@ export default function Home() {
           animate="visible"
           className="mb-20"
         >
-          <motion.h1
-            custom={0}
-            variants={fade}
-            className="text-[32px] font-normal leading-[1.2] mb-8 tracking-[-0.02em]"
-          >
-            Ayman Hassen
-          </motion.h1>
-
-          <motion.p custom={1} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
+          <motion.p custom={0} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
             I&apos;m the founder of{' '}
             <a href="#building" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">Maidah</a>
             , where I&apos;m building a permanent endowment fund for Muslims in the West.
           </motion.p>
 
-          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
+          <motion.p custom={1} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
             Before this, I was a product manager at{' '}
             <span className="text-[#1A1A1A]">Apple</span> on the Mac team for four years,
             ran strategy and operations at{' '}
@@ -95,13 +87,13 @@ export default function Home() {
             , a venture fund and studio for Muslim founders.
           </motion.p>
 
-          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
+          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
             I&apos;ve had a few products acquired along the way. I{' '}
             <Link href="/writing" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">write</Link>
             , invest in early-stage companies, and am currently based in Dallas.
           </motion.p>
 
-          <motion.p custom={4} variants={fade} className="text-[15px] leading-[1.7] text-[#8A8A8A]">
+          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.7] text-[#8A8A8A]">
             ~A
           </motion.p>
         </motion.section>
