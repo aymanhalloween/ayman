@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate AH Favicon</title>
+</head>
+<body>
+    <h1>Favicon Generator</h1>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid black; image-rendering: pixelated; width: 128px; height: 128px;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download favicon.png</button>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Black background
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, 32, 32);
+
+        // White text
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 14px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('AH', 16, 18);
+
+        function downloadFavicon() {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'favicon.png';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+    </script>
+</body>
+</html>

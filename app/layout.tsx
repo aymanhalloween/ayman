@@ -3,27 +3,22 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Ayman Hassen | Product Manager & Investor',
+    default: 'Ayman Hassen',
     template: '%s | Ayman Hassen'
   },
-  description: 'Product manager and investor based in SF and Dallas. Experience building products at Apple, strategy at Nike, and operating partner at Alif VC. Currently investing into companies and building WAQF endowment fund.',
+  description: 'Founder of Maidah. Previously Apple, Nike, Alif. Building permanent institutions for Muslims in the West.',
   keywords: [
     'Ayman Hassen',
+    'Maidah',
+    'Maidah Foundation',
+    'Apple',
+    'Nike',
+    'Alif',
     'Product Manager',
-    'Investor',
-    'Venture Capital',
-    'Apple Product Manager',
-    'Nike Strategy',
-    'Alif VC',
-    'Hassen Ventures',
-    'San Francisco',
+    'Waqf',
+    'Endowment',
+    'Muslim',
     'Dallas',
-    'WAQF',
-    'Endowment Fund',
-    'Startup Advisor',
-    'Tech Advisor',
-    'Product Strategy',
-    'Operating Partner'
   ],
   authors: [{ name: 'Ayman Hassen', url: 'https://aymanhassen.com' }],
   creator: 'Ayman Hassen',
@@ -40,17 +35,17 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Ayman Hassen | Product Manager & Investor',
-    description: 'Product manager and investor based in SF and Dallas. Experience at Apple, Nike, and Alif VC. Building the future through startups and WAQF endowment fund.',
+    title: 'Ayman Hassen',
+    description: 'Founder of Maidah. Previously Apple, Nike, Alif. Building permanent institutions for Muslims in the West.',
     url: 'https://aymanhassen.com',
     siteName: 'Ayman Hassen',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Ayman Hassen | Product Manager & Investor',
-    description: 'Product manager and investor based in SF and Dallas. Experience at Apple, Nike, and Alif VC.',
+    card: 'summary',
+    title: 'Ayman Hassen',
+    description: 'Founder of Maidah. Previously Apple, Nike, Alif.',
     creator: '@aymancooks',
   },
   robots: {
@@ -73,7 +68,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-black">{children}</body>
+      <body className="bg-[#0A0A0A] text-[#E8E8E8]">{children}</body>
     </html>
   )
 } 

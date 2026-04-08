@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ayman Hassen — Portfolio
 
-## Getting Started
+A modern, editorial-style portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## Design Philosophy
+
+This portfolio embodies the intersection of editorial elegance and technical minimalism. Inspired by high-end design references like Zuhair.io, Porsche configurator aesthetics, and Vogue editorial layouts, the site balances soulful storytelling with clean, intentional design.
+
+## Features
+
+- **Editorial Typography**: Mix of serif and sans-serif fonts for hierarchy and personality
+- **Modular Scrolling**: Each section flows as its own beat with considered spacing
+- **Tasteful Animations**: Subtle Framer Motion effects that feel handcrafted
+- **Responsive Design**: Mobile-first approach that maintains elegance across devices
+- **Performance Optimized**: Built with Next.js 14 for optimal loading and SEO
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion for micro-interactions
+- **Icons**: Lucide React for clean, consistent iconography
+- **Deployment**: Optimized for Vercel deployment
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Colors
+- **Charcoal**: `#2A2A2A` - Primary text and strong accents
+- **Bone**: `#F5F5F0` - Warm background and light elements
+- **Sand**: `#E8E6E1` - Subtle backgrounds and borders
+- **Burnt Orange**: `#D2691E` - Strategic accent color
+- **Sage**: `#9CAF88` - Secondary accent
+- **Electric Blue**: `#0066FF` - Links and CTAs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Typography
+- **Headings**: Georgia serif for editorial feel
+- **Body**: Inter sans-serif for readability
+- **Editorial Text**: Georgia with increased line-height for storytelling sections
 
-## Learn More
+## Content Sections
 
-To learn more about Next.js, take a look at the following resources:
+1. **Hero**: Strong opening statement with clear value proposition
+2. **About**: Personal story that builds trust and connection
+3. **Projects**: Modular showcase of work with filtering capability
+4. **Principles**: Core beliefs and design philosophy
+5. **Contact**: Clear CTAs for engagement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Performance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Optimized images and fonts
+- Minimal JavaScript bundle
+- Semantic HTML for accessibility
+- Fast loading with Next.js optimization
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Designed with intention. Built for humans.* 

@@ -1,5 +1,31 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+const fade = {
+  hidden: { opacity: 0, y: 8 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.08, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
+  }),
+};
+
+const projects = [
+  { name: 'Maidah', desc: 'Permanent endowment for Muslims in the West', url: '#', status: 'Active' },
+  { name: 'The Chain', desc: 'Documentary on the oral transmission of the Quran', url: '#', status: 'In development' },
+  { name: 'mahr.fyi', desc: 'Democratizing mahr data', url: 'https://mahr.fyi', status: 'Acquired' },
+  { name: 'Subtrack', desc: 'Subscription tracking and financial clarity', url: 'https://subtrack.xyz', status: 'Acquired' },
+  { name: 'Eterna', desc: 'AI-powered biography service for families', url: 'https://eterna.so', status: 'Acquired' },
+];
+
+const statusColor: Record<string, string> = {
+  'Active': 'text-[#E8E8E8]',
+  'Acquired': 'text-[#636363]',
+  'In development': 'text-[#737373]',
+};
+
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -7,177 +33,204 @@ export default function Home() {
     "name": "Ayman Hassen",
     "url": "https://aymanhassen.com",
     "email": "ayman.hassen1@gmail.com",
-    "jobTitle": "Product Manager & Investor",
-    "description": "Product manager and investor based in SF and Dallas",
+    "jobTitle": "Founder, Maidah",
+    "description": "Founder of Maidah. Previously Apple, Nike, Alif. Building permanent institutions for Muslims in the West.",
     "sameAs": [
       "https://www.linkedin.com/in/ayman-hassen/",
       "https://twitter.com/aymancooks",
-      "https://calendly.com/ayman-hassen1"
+      "https://growwiththeflow.substack.com"
     ],
-    "worksFor": [
-      {
-        "@type": "Organization",
-        "name": "Hassen Ventures",
-        "url": "https://aymanhassen.com"
-      }
-    ],
-    "alumniOf": [
-      {
-        "@type": "Organization",
-        "name": "Apple"
-      },
-      {
-        "@type": "Organization",
-        "name": "Nike"
-      },
-      {
-        "@type": "Organization",
-        "name": "Alif VC"
-      }
-    ],
-    "knowsAbout": [
-      "Product Management",
-      "Strategy & Operations",
-      "Startups",
-      "Venture Capital",
-      "Investing"
-    ]
   };
 
   return (
-    <div className="bg-white">
+    <div className="min-h-screen bg-[#0A0A0A] text-[#E8E8E8]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="max-w-[680px] mx-auto px-6 py-16">
-        {/* Name */}
-        <h1 className="text-[32px] font-normal leading-tight mb-12">
-              Ayman Hassen
-              </h1>
-              
-        {/* About Me */}
-        <section className="mb-16">
-          <p className="text-[16px] leading-[1.6] mb-6">
-            I'm a product guy that builds cool stuff based in SF 🔄 Dallas.
-          </p>
-          <p className="text-[16px] leading-[1.6] mb-6">
-            I have experience building product at Apple, running strategy and ops at Nike, and being an operating partner at Alif VC. Currently consulting for startups, investing into companies, and building cool stuff on the side. Always open to{' '}
-            <a href="https://calendly.com/ayman-hassen1" target="_blank" rel="noopener noreferrer">
-              chatting
-            </a>
-            {' '}📲.
-          </p>
-          <p className="text-[16px] leading-[1.6] text-gray-600">
-            P.S. Also currently building a WAQF (endowment fund). This is my life's work and what I'm dedicating my life to building.
-          </p>
-        </section>
+
+      {/* Nav */}
+      <nav className="max-w-[640px] mx-auto px-6 pt-12 pb-4 flex items-center justify-between">
+        <Link href="/" className="text-[13px] font-medium tracking-wide text-[#E8E8E8] no-underline">
+          Ayman Hassen
+        </Link>
+        <div className="flex gap-6">
+          <a href="#building" className="text-[13px] text-[#737373] hover:text-[#E8E8E8] transition-colors duration-200 no-underline">
+            Building
+          </a>
+          <Link href="/writing" className="text-[13px] text-[#737373] hover:text-[#E8E8E8] transition-colors duration-200 no-underline">
+            Writing
+          </Link>
+        </div>
+      </nav>
+
+      <main className="max-w-[640px] mx-auto px-6 pt-16 pb-24">
+
+        {/* Hero */}
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          className="mb-20"
+        >
+          <motion.h1
+            custom={0}
+            variants={fade}
+            className="text-[32px] font-normal leading-[1.2] mb-8 tracking-[-0.02em]"
+          >
+            Ayman Hassen
+          </motion.h1>
+
+          <motion.p custom={1} variants={fade} className="text-[15px] leading-[1.7] text-[#A0A0A0] mb-4">
+            I&apos;m the founder of{' '}
+            <a href="#building" className="text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors">Maidah</a>
+            , where I&apos;m building a permanent endowment fund for Muslims in the West.
+          </motion.p>
+
+          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.7] text-[#A0A0A0] mb-4">
+            Before this, I was a product manager at{' '}
+            <span className="text-[#E8E8E8]">Apple</span> on the Mac team for four years,
+            ran strategy and operations at{' '}
+            <span className="text-[#E8E8E8]">Nike</span>, and was on the founding team at{' '}
+            <a href="https://alif.build" target="_blank" rel="noopener noreferrer" className="text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors">Alif</a>
+            , a venture fund and studio for Muslim founders.
+          </motion.p>
+
+          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.7] text-[#A0A0A0] mb-4">
+            I&apos;ve had a few products acquired along the way. I{' '}
+            <Link href="/writing" className="text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors">write</Link>
+            , invest in early-stage companies, and am currently based in Dallas.
+          </motion.p>
+
+          <motion.p custom={4} variants={fade} className="text-[15px] leading-[1.7] text-[#636363]">
+            ~A
+          </motion.p>
+        </motion.section>
+
+        {/* Building */}
+        <motion.section
+          id="building"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="mb-20"
+        >
+          <motion.h2
+            custom={0}
+            variants={fade}
+            className="text-[12px] font-medium mb-8 text-[#636363] uppercase tracking-[0.15em]"
+          >
+            Building
+          </motion.h2>
+
+          <div className="space-y-0">
+            {projects.map((project, i) => (
+              <motion.div
+                key={project.name}
+                custom={i + 1}
+                variants={fade}
+                className="group py-4 border-b border-[#1A1A1A] first:border-t first:border-[#1A1A1A]"
+              >
+                <div className="flex items-baseline justify-between gap-4">
+                  <div className="flex-1 min-w-0">
+                    {project.url !== '#' ? (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[15px] font-medium text-[#E8E8E8] no-underline group-hover:text-[#C4A574] transition-colors duration-200"
+                      >
+                        {project.name}
+                      </a>
+                    ) : (
+                      <span className="text-[15px] font-medium text-[#E8E8E8]">
+                        {project.name}
+                      </span>
+                    )}
+                    <p className="text-[13px] text-[#636363] mt-0.5">{project.desc}</p>
+                  </div>
+                  <span className={`text-[11px] uppercase tracking-[0.1em] font-medium shrink-0 ${statusColor[project.status] || 'text-[#636363]'}`}>
+                    {project.status}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
         {/* Experience */}
-        <section className="mb-16">
-          <h2 className="text-[14px] font-normal mb-6 text-gray-600 uppercase tracking-wider">Experience</h2>
-          
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="mb-20"
+        >
+          <motion.h2
+            custom={0}
+            variants={fade}
+            className="text-[12px] font-medium mb-8 text-[#636363] uppercase tracking-[0.15em]"
+          >
+            Experience
+          </motion.h2>
+
           <div className="space-y-6">
-              <div>
-              <a href="https://aymanhassen.com" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-2">
-                Hassen Ventures ↗
-              </a>
-              <div className="flex justify-between items-start mb-1">
-                <p className="text-[16px]">Investing and helping companies scale</p>
-                <p className="text-[14px] text-gray-500">Always</p>
-              </div>
+            {[
+              { co: 'Maidah', role: 'Founder', time: '2025 —', url: '#' },
+              { co: 'Alif', role: 'Operating Partner, Founding Team', time: '2024 — 2025', url: 'https://alif.build' },
+              { co: 'Nike', role: 'Strategy & Operations', time: '2022', url: 'https://nike.com' },
+              { co: 'Apple', role: 'Product Manager, Mac', time: '2018 — 2022', url: 'https://apple.com' },
+            ].map((exp, i) => (
+              <motion.div key={exp.co} custom={i + 1} variants={fade} className="flex items-baseline justify-between">
+                <div>
+                  {exp.url !== '#' ? (
+                    <a
+                      href={exp.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[15px] text-[#E8E8E8] no-underline hover:text-[#C4A574] transition-colors duration-200"
+                    >
+                      {exp.co}
+                    </a>
+                  ) : (
+                    <span className="text-[15px] text-[#E8E8E8]">{exp.co}</span>
+                  )}
+                  <p className="text-[13px] text-[#636363]">{exp.role}</p>
                 </div>
-                
-            <div>
-              <a href="https://alif.build" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-2">
-                Alif VC ↗
-              </a>
-              <div className="flex justify-between items-start mb-1">
-                <p className="text-[16px]">Operating Partner (founding team)</p>
-                <p className="text-[14px] text-gray-500">2024 - 2025</p>
-              </div>
+                <span className="text-[13px] text-[#4A4A4A] shrink-0">{exp.time}</span>
+              </motion.div>
+            ))}
           </div>
+        </motion.section>
 
-                        <div>
-              <a href="https://nike.com" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-2">
-                Nike ↗
-              </a>
-              <div className="flex justify-between items-start mb-1">
-                <p className="text-[16px]">Strategy & Operations</p>
-                <p className="text-[14px] text-gray-500">2022</p>
-                        </div>
-                      </div>
-                      
-            <div>
-              <a href="https://apple.com" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-2">
-                Apple ↗
-              </a>
-              <div className="flex justify-between items-start mb-1">
-                <p className="text-[16px]">Product Manager</p>
-                <p className="text-[14px] text-gray-500">2018 - 2022</p>
-              </div>
-            </div>
+        {/* Footer / Contact */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="pt-8 border-t border-[#1A1A1A]"
+        >
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {[
+              { label: 'Email', url: 'mailto:ayman.hassen1@gmail.com' },
+              { label: 'LinkedIn', url: 'https://www.linkedin.com/in/ayman-hassen/' },
+              { label: 'X', url: 'https://twitter.com/aymancooks' },
+              { label: 'Substack', url: 'https://growwiththeflow.substack.com' },
+              { label: 'GitHub', url: 'https://github.com/aymanhalloween' },
+            ].map((link, i) => (
+              <motion.a
+                key={link.label}
+                custom={i}
+                variants={fade}
+                href={link.url}
+                target={link.url.startsWith('mailto') ? undefined : '_blank'}
+                rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                className="text-[13px] text-[#636363] hover:text-[#E8E8E8] transition-colors duration-200 no-underline"
+              >
+                {link.label}
+              </motion.a>
+            ))}
           </div>
-        </section>
+        </motion.section>
 
-        {/* Projects */}
-        <section className="mb-16">
-          <h2 className="text-[14px] font-normal mb-6 text-gray-600 uppercase tracking-wider">Projects</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-              <a href="https://subtrack.xyz" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-1">
-                Subtrack ↗
-              </a>
-              <p className="text-[14px] text-gray-500">CFO in your pocket</p>
-                      </div>
-
-            <div>
-              <a href="https://eterna.so" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-1">
-                Eterna ↗
-              </a>
-              <p className="text-[14px] text-gray-500">AI memory engagement platform</p>
-                    </div>
-                    
-            <div>
-              <a href="https://mahr.fyi" target="_blank" rel="noopener noreferrer" className="text-[16px] block mb-1">
-                mahr.fyi ↗
-              </a>
-              <p className="text-[14px] text-gray-500">Democratizing mahr data</p>
-              </div>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section className="pt-8 border-t border-gray-200 mb-16">
-          <h2 className="text-[14px] font-normal mb-6 text-gray-600 uppercase tracking-wider">Contact</h2>
-              
-          <div className="space-y-3">
-            <div>
-              <a href="mailto:ayman.hassen1@gmail.com" className="text-[16px] block">
-                ayman.hassen1@gmail.com
-              </a>
-            </div>
-                
-            <div>
-              <a href="https://calendly.com/ayman-hassen1" target="_blank" rel="noopener noreferrer" className="text-[16px] block">
-                Calendly ↗
-              </a>
-              </div>
-              
-            <div>
-              <a href="https://www.linkedin.com/in/ayman-hassen/" target="_blank" rel="noopener noreferrer" className="text-[16px] block">
-                LinkedIn ↗
-              </a>
-                </div>
-                
-            <div>
-              <a href="https://twitter.com/aymancooks" target="_blank" rel="noopener noreferrer" className="text-[16px] block">
-                Twitter ↗
-              </a>
-              </div>
-          </div>
-        </section>
       </main>
     </div>
   );
