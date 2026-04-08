@@ -38,7 +38,7 @@ export default function ArticlePage() {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A] flex items-center justify-center">
+      <div className="min-h-screen bg-white text-[#1A1A1A] flex items-center justify-center">
         <div className="text-center">
           <p className="text-[#8A8A8A] mb-4">Essay not found.</p>
           <Link href="/writing" className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors no-underline">
@@ -50,7 +50,7 @@ export default function ArticlePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A]">
+    <div className="min-h-screen bg-white text-[#1A1A1A]">
 
       {/* Nav */}
       <nav className="max-w-[640px] mx-auto px-6 pt-12 pb-4 flex items-center justify-between">

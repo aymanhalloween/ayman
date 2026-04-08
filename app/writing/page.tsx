@@ -15,7 +15,7 @@ const fade = {
 
 export default function WritingPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A]">
+    <div className="min-h-screen bg-white text-[#1A1A1A]">
 
       {/* Nav */}
       <nav className="max-w-[640px] mx-auto px-6 pt-12 pb-4 flex items-center justify-between">

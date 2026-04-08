@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A]">
+    <div className="min-h-screen bg-white text-[#1A1A1A]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -70,33 +70,49 @@ export default function Home() {
         <motion.section
           initial="hidden"
           animate="visible"
-          className="mb-20"
+          className="mb-16"
         >
-          <motion.p custom={0} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
+          <motion.h1
+            custom={0}
+            variants={fade}
+            className="text-[36px] font-normal leading-[1.2] mb-2 tracking-[-0.02em]"
+          >
+            Ayman Hassen
+          </motion.h1>
+
+          <motion.p custom={1} variants={fade} className="text-[14px] text-[#A0A0A0] mb-10">
+            @aymancooks
+          </motion.p>
+
+          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.8] text-[#525252] mb-4">
             I&apos;m the founder of{' '}
-            <a href="#building" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">Maidah</a>
+            <a href="#building" className="text-[#1A1A1A] underline decoration-[#D4D4D4] underline-offset-[3px] hover:decoration-[#1A1A1A] transition-all">Maidah</a>
             , where I&apos;m building a permanent endowment fund for Muslims in the West.
           </motion.p>
 
-          <motion.p custom={1} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
+          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.8] text-[#525252] mb-4">
             Before this, I was a product manager at{' '}
-            <span className="text-[#1A1A1A]">Apple</span> on the Mac team for four years,
-            ran strategy and operations at{' '}
-            <span className="text-[#1A1A1A]">Nike</span>, and was on the founding team at{' '}
-            <a href="https://alif.build" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">Alif</a>
+            <a href="https://apple.com" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A] underline decoration-[#D4D4D4] underline-offset-[3px] hover:decoration-[#1A1A1A] transition-all">Apple</a>
+            {' '}on the Mac team for four years, ran strategy and operations at{' '}
+            <a href="https://nike.com" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A] underline decoration-[#D4D4D4] underline-offset-[3px] hover:decoration-[#1A1A1A] transition-all">Nike</a>
+            , and was on the founding team at{' '}
+            <a href="https://alif.build" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A] underline decoration-[#D4D4D4] underline-offset-[3px] hover:decoration-[#1A1A1A] transition-all">Alif</a>
             , a venture fund and studio for Muslim founders.
           </motion.p>
 
-          <motion.p custom={2} variants={fade} className="text-[15px] leading-[1.7] text-[#525252] mb-4">
+          <motion.p custom={4} variants={fade} className="text-[15px] leading-[1.8] text-[#525252] mb-4">
             I&apos;ve had a few products acquired along the way. I{' '}
-            <Link href="/writing" className="text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors">write</Link>
+            <Link href="/writing" className="text-[#1A1A1A] underline decoration-[#D4D4D4] underline-offset-[3px] hover:decoration-[#1A1A1A] transition-all">write</Link>
             , invest in early-stage companies, and am currently based in Dallas.
           </motion.p>
 
-          <motion.p custom={3} variants={fade} className="text-[15px] leading-[1.7] text-[#8A8A8A]">
+          <motion.p custom={5} variants={fade} className="text-[15px] leading-[1.8] text-[#A0A0A0] mt-8">
             ~A
           </motion.p>
         </motion.section>
+
+        {/* Divider */}
+        <div className="w-full h-px bg-[#E5E5E5] mb-16" />
 
         {/* Building */}
         <motion.section
@@ -149,51 +165,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Experience */}
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          className="mb-20"
-        >
-          <motion.h2
-            custom={0}
-            variants={fade}
-            className="text-[12px] font-medium mb-8 text-[#8A8A8A] uppercase tracking-[0.15em]"
-          >
-            Experience
-          </motion.h2>
-
-          <div className="space-y-6">
-            {[
-              { co: 'Maidah', role: 'Founder', time: '2025 —', url: '#' },
-              { co: 'Alif', role: 'Operating Partner, Founding Team', time: '2024 — 2025', url: 'https://alif.build' },
-              { co: 'Nike', role: 'Strategy & Operations', time: '2022', url: 'https://nike.com' },
-              { co: 'Apple', role: 'Product Manager, Mac', time: '2018 — 2022', url: 'https://apple.com' },
-            ].map((exp, i) => (
-              <motion.div key={exp.co} custom={i + 1} variants={fade} className="flex items-baseline justify-between">
-                <div>
-                  {exp.url !== '#' ? (
-                    <a
-                      href={exp.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[15px] text-[#1A1A1A] no-underline hover:text-[#C4A574] transition-colors duration-200"
-                    >
-                      {exp.co}
-                    </a>
-                  ) : (
-                    <span className="text-[15px] text-[#1A1A1A]">{exp.co}</span>
-                  )}
-                  <p className="text-[13px] text-[#8A8A8A]">{exp.role}</p>
-                </div>
-                <span className="text-[13px] text-[#A0A0A0] shrink-0">{exp.time}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Footer / Contact */}
+        {/* Footer */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -226,4 +198,4 @@ export default function Home() {
       </main>
     </div>
   );
-} 
+}
