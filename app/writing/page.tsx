@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { essays } from './essays';
 
 const fade = {
   hidden: { opacity: 0, y: 8 },
@@ -11,23 +12,6 @@ const fade = {
     transition: { delay: i * 0.08, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
   }),
 };
-
-// Add your essays here. Each entry becomes a page at /writing/[slug]
-// To add a new essay: add an entry here AND create the content in app/writing/[slug]/articles.ts
-export const essays = [
-  {
-    slug: 'sample-essay',
-    title: 'Your first essay title goes here',
-    date: 'April 2026',
-    description: 'A short description that appears on the writing index.',
-  },
-  // {
-  //   slug: 'another-essay',
-  //   title: 'Another Essay',
-  //   date: 'March 2026',
-  //   description: 'Description here.',
-  // },
-];
 
 export default function WritingPage() {
   return (
