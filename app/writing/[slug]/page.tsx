@@ -3,24 +3,7 @@
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
-// ─── ADD YOUR ESSAYS HERE ───
-// Each key is the URL slug. The content is an array of paragraphs.
-// For section headers, prefix with "## " and they'll render as headers.
-// For standalone lines (like "Bismillah"), they'll render with emphasis.
-const articles: Record<string, { title: string; date: string; content: string[] }> = {
-  'sample-essay': {
-    title: 'Your first essay title goes here',
-    date: 'April 2026',
-    content: [
-      'This is a placeholder for your first essay.',
-      'Replace this content with your actual writing. Each string in this array becomes a paragraph.',
-      '## A Section Header',
-      'You can add section headers by starting a line with "## ". They\'ll render with the right styling.',
-      'To add a new essay, just add another key to the articles object in this file and a matching entry in the essays array in /writing/page.tsx.',
-    ],
-  },
-};
+import { articles } from './articles';
 
 const fade = {
   hidden: { opacity: 0, y: 8 },
@@ -40,14 +23,16 @@ export default function ArticlePage() {
     return (
       <div className="min-h-screen bg-white text-[#1A1A1A] flex items-center justify-center">
         <div className="text-center">
-          <p className="text-[#8A8A8A] mb-4">Essay not found.</p>
-          <Link href="/writing" className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors no-underline">
-            ← Back to writing
+          <p className="text-[#A0A0A0] mb-4">Essay not found.</p>
+          <Link href="/writing" className="text-[13px] text-[#A0A0A0] hover:text-[#1A1A1A] transition-colors no-underline">
+            &larr; Back to writing
           </Link>
         </div>
       </div>
     );
   }
+
+  let blockIndex = 0;
 
   return (
     <div className="min-h-screen bg-white text-[#1A1A1A]">
@@ -70,46 +55,71 @@ export default function ArticlePage() {
       <main className="max-w-[640px] mx-auto px-6 pt-16 pb-24">
         <motion.article initial="hidden" animate="visible">
 
-          <motion.div custom={0} variants={fade} className="mb-12">
-            <Link href="/writing" className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors no-underline">
-              ← Back
-            </Link>
-          </motion.div>
-
           <motion.h1
-            custom={1}
+            custom={0}
             variants={fade}
-            className="text-[28px] font-normal leading-[1.3] mb-3 tracking-[-0.02em]"
+            className="text-[36px] font-normal leading-[1.2] mb-3 tracking-[-0.02em]"
           >
             {article.title}
           </motion.h1>
 
-          <motion.p custom={2} variants={fade} className="text-[13px] text-[#8A8A8A] mb-12">
+          <motion.p custom={1} variants={fade} className="text-[14px] text-[#A0A0A0] mb-10">
             {article.date}
           </motion.p>
 
-          <div className="space-y-5">
+          {/* Divider */}
+          <motion.div custom={2} variants={fade} className="w-full h-px bg-[#E5E5E5] mb-10" />
+
+          <div>
             {article.content.map((block, i) => {
-              if (block.startsWith('## ')) {
+              blockIndex++;
+              const ci = blockIndex + 2;
+
+              if (block.type === 'break') {
+                return <div key={i} className="h-8" />;
+              }
+
+              if (block.type === 'h2') {
                 return (
                   <motion.h2
                     key={i}
-                    custom={i + 3}
+                    custom={ci}
                     variants={fade}
-                    className="text-[17px] font-medium text-[#1A1A1A] mt-10 mb-2"
+                    className="text-[22px] font-normal leading-[1.3] text-[#1A1A1A] mt-2 mb-5 tracking-[-0.01em]"
                   >
-                    {block.replace('## ', '')}
+                    {block.text}
                   </motion.h2>
                 );
               }
+
+              if (block.type === 'h3') {
+                return (
+                  <motion.h3
+                    key={i}
+                    custom={ci}
+                    variants={fade}
+                    className="text-[17px] font-normal italic leading-[1.5] text-[#525252] mb-6"
+                  >
+                    {block.text}
+                  </motion.h3>
+                );
+              }
+
+              // Paragraph — handle newlines as line breaks
+              const lines = block.text.split('\n');
               return (
                 <motion.p
                   key={i}
-                  custom={i + 3}
+                  custom={ci}
                   variants={fade}
-                  className="text-[15px] leading-[1.8] text-[#525252]"
+                  className="text-[15px] leading-[1.85] text-[#525252] mb-4"
                 >
-                  {block}
+                  {lines.map((line, li) => (
+                    <span key={li}>
+                      {line}
+                      {li < lines.length - 1 && <br />}
+                    </span>
+                  ))}
                 </motion.p>
               );
             })}
@@ -117,12 +127,14 @@ export default function ArticlePage() {
 
         </motion.article>
 
+        {/* Divider */}
+        <div className="w-full h-px bg-[#E5E5E5] mt-16 mb-8" />
+
         {/* Footer */}
         <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="pt-8 mt-20 border-t border-[#E5E5E5]"
         >
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {[
@@ -139,7 +151,7 @@ export default function ArticlePage() {
                 href={link.url}
                 target={link.url.startsWith('mailto') ? undefined : '_blank'}
                 rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
+                className="text-[13px] text-[#A0A0A0] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
               >
                 {link.label}
               </motion.a>

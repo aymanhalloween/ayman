@@ -34,41 +34,52 @@ export default function WritingPage() {
 
       <main className="max-w-[640px] mx-auto px-6 pt-16 pb-24">
         <motion.section initial="hidden" animate="visible">
-          <motion.h2
+          <motion.h1
             custom={0}
             variants={fade}
-            className="text-[12px] font-medium mb-10 text-[#8A8A8A] uppercase tracking-[0.15em]"
+            className="text-[36px] font-normal leading-[1.2] mb-2 tracking-[-0.02em]"
+          >
+            Writing
+          </motion.h1>
+          <motion.p
+            custom={1}
+            variants={fade}
+            className="text-[14px] text-[#A0A0A0] mb-12"
           >
             My thoughts, evolving over time
-          </motion.h2>
+          </motion.p>
 
           <div className="space-y-0">
             {essays.map((essay, i) => (
               <motion.div
                 key={essay.slug}
-                custom={i + 1}
+                custom={i + 2}
                 variants={fade}
               >
                 <Link
                   href={`/writing/${essay.slug}`}
-                  className="group block py-6 border-b border-[#E5E5E5] first:border-t first:border-[#E5E5E5] no-underline"
+                  className="group flex items-baseline justify-between gap-4 py-5 border-b border-[#E5E5E5] first:border-t first:border-[#E5E5E5] no-underline"
                 >
-                  <h3 className="text-[17px] font-normal text-[#1A1A1A] group-hover:text-[#C4A574] transition-colors duration-200 mb-1">
+                  <h3 className="text-[15px] font-normal text-[#1A1A1A] group-hover:text-[#737373] transition-colors duration-200">
                     {essay.title}
                   </h3>
-                  <p className="text-[13px] text-[#8A8A8A]">{essay.date}</p>
+                  <span className="text-[13px] text-[#A0A0A0] shrink-0">
+                    {essay.date}
+                  </span>
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.section>
 
+        {/* Divider */}
+        <div className="w-full h-px bg-[#E5E5E5] mt-16 mb-8" />
+
         {/* Footer */}
         <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="pt-8 mt-16 border-t border-[#E5E5E5]"
         >
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {[
@@ -85,7 +96,7 @@ export default function WritingPage() {
                 href={link.url}
                 target={link.url.startsWith('mailto') ? undefined : '_blank'}
                 rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className="text-[13px] text-[#8A8A8A] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
+                className="text-[13px] text-[#A0A0A0] hover:text-[#1A1A1A] transition-colors duration-200 no-underline"
               >
                 {link.label}
               </motion.a>

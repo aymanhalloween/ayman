@@ -103,7 +103,7 @@ export default function Home() {
           <motion.p custom={4} variants={fade} className="text-[15px] leading-[1.8] text-[#525252] mb-4">
             I&apos;ve had a few products acquired along the way. I{' '}
             <Link href="/writing" className="text-[#1A1A1A] underline decoration-[#D4D4D4] underline-offset-[3px] hover:decoration-[#1A1A1A] transition-all">write</Link>
-            , invest in early-stage companies, and am currently based in Dallas.
+            , invest in people, and am currently based in Dallas.
           </motion.p>
 
           <motion.p custom={5} variants={fade} className="text-[15px] leading-[1.8] text-[#A0A0A0] mt-8">
