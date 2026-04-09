@@ -1,11 +1,5 @@
 export const essays = [
   {
-    slug: 'love-and-ambition',
-    title: 'Love and ambition',
-    date: 'March 2026',
-    description: 'On the false tension between career and commitment.',
-  },
-  {
     slug: 'the-skys-shake-but-my-heart-doesnt',
     title: 'The sky\'s shake but my heart doesn\'t',
     date: 'December 2025',
